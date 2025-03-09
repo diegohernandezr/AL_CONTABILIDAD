@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    justify-content: space-between; /* Hace que el footer se quede en la parte inferior */
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1a0950;
+    padding: 10px;
+    z-index: 10; /* Asegura que el navbar esté sobre el contenido */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacio entre el logo y la lista de navegación */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilo para el logo */
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+}
+
+.navbar-logo .logo {
+    height: 40px; /* Ajusta el tamaño del logo */
+    width: auto;
+}
+
+/* Estilo para la lista de navegación */
+.nav-list {
+    display: flex;
+    justify-content: flex-end; /* Alinea la lista de enlaces a la derecha */
+    list-style: none;
+    margin: 0; /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+}
+
+.nav-list li {
+    margin: 0 15px; /* Espacio entre los elementos de la lista */
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-list li a:hover {
+    background-color: #555; /* Cambia el color al pasar el ratón por encima */
+}
+
+
+.promt-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.promt-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.promt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    text-align: center;
+}
+
+.promt img {
+    width: 250px; /* Ajusta el tamaño de la imagen */
+    height: 250px; /* Ajusta la altura de la imagen para que sea igual al ancho */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+    border-radius: 50%; /* Redondea la imagen para que sea un círculo */
+    box-shadow: 0 4px 8px rgba(26, 9, 80, 0.2); /* Sombra con el color #1a0950 y opacidad 0.2 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza la transición de los efectos */
+}
+
+.promt img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(26, 9, 80, 0.4); /* Aumenta la sombra al pasar el cursor, opacidad 0.4 */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto verticalmente */
+    align-items: center;
+    max-width: 600px; /* Limita el ancho del texto */
+    height: 100%; /* Asegura que el texto tome toda la altura disponible */
+}
+
+.text-container h1 {
+    margin-bottom: 10px; /* Espacio entre el título y el primer párrafo */
+    font-weight: 800;
+}
+
+.text-container p {
+    margin-bottom: 8px; /* Espacio entre los párrafos */
+    text-align: justify; 
+}
+
+/* Estilo para la sección de servicios */
+.servicio {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo del título */
+.servicio-title h1 {
+    font-size: 32px;
+    color: #1a0950;
+    text-align: center; /* Esto centra el texto horizontalmente */
+    margin: 0 auto; /* Asegura que el contenedor del texto tenga el mismo margen en ambos lados */
+}
+
+
+.servicio-title p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center; /* Esto centra el texto horizontalmente */
+
+}
+
+/* Contenedor de las tarjetas */
+.servicio-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Se adapta al tamaño de la pantalla */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Estilo de cada tarjeta */
+.servicio-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card h2 {
+    font-size: 24px;
+    color: #1a0950;
+    margin-bottom: 15px;
+}
+
+.servicio-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Efecto hover */
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Agregar margen superior al contenido para no cubrirlo por el navbar */
+.contact {
+    margin-top: 60px; /* Ajusta el margen superior según la altura de tu navbar */
+    padding: 20px;
+}
+
+/* Título de la sección de contacto */
+.contact-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-title h1 {
+    font-size: 32px;
+    color: #1a0950;
+}
+
+.contact-title p {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #555;
+}
+
+/* Ajustar la sección de proyectos para que no quede oculta por el navbar */
+.projects, .contabilidad {
+    margin-top: 60px; /* Ajusta este margen según la altura de tu navbar */
+    padding: 20px;
+}
+
+.projects-title, .contabilidad-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects-list, .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card, .service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h2, .service-card h2 {
+    color: #1a0950;
+}
+
+.project-card p, .service-card p {
+    color: #666;
+}
+
+/* El footer se mantendrá al fondo */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
